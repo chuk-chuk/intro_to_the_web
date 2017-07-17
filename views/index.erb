@@ -4,3 +4,10 @@
 <div style='border: 20px dotted <%= @colour %>; display:inline-block'>
   <img src='http://f.cl.ly/items/0k0v3e2X3l2f3i1n1Y19/Screen%20Shot%202013-09-10%20at%2011.32.00.png'>
 </div>
+<% if @name == nil %>
+<form action="/named-cat">
+<br>Add some info here:<br>
+<input type="text" name="name" size="80"><br>
+<input type="submit" value="Submit">
+</form>
+<% end %>
