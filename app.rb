@@ -15,7 +15,14 @@ get '/about' do
   "About us"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking"].sample
+  @colour = 'green'
+  erb(:index)
+end
+
+get '/named-cat' do
+  @name = params[:name]
+  @colour = params[:colour]
   erb(:index)
 end
